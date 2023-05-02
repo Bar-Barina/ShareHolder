@@ -1,6 +1,8 @@
 <section class="transfer-fund">
   <h3>Transfer coins to {{ contact.name }}</h3>
   <label for="amount"></label>
-  <input (input)="onSetAmount($event)" type="number" name="amount" id="amount" />
+  <section class="transfer-section"> 
+  <input (input)="onSetAmount($event)" type="number" name="amount" id="amount" placeholder="How much?" />
   <button (click)="onTransferCoins(contact)">Transfer</button>
+</section>
 </section>

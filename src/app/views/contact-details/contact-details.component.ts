@@ -18,7 +18,8 @@ export class ContactDetailsComponent implements OnInit {
   constructor(
     private contactService: ContactService,
     private route: ActivatedRoute,
-    private router: Router // private location: Location
+    private router: Router,
+    private userService : UserService
   ) {}
 
   location = inject(Location);
@@ -26,6 +27,7 @@ export class ContactDetailsComponent implements OnInit {
   contact$!: Observable<Contact>;
   ans$!: string;
   ans = '';
+  user = this.userService.getUser();
 
   ngOnInit(): void {
     console.log('test');
@@ -39,6 +41,6 @@ export class ContactDetailsComponent implements OnInit {
   }
 
   onBack() {
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/contact');
   }
 }

@@ -1,15 +1,20 @@
-<section *ngIf="(contact$ | async) as contact" class="contact-details">
-    <p><b>Name:</b> {{contact.name}}</p>
-    <p><b>Phone:</b> {{contact.phone}}</p>
-    <p><b>Email:</b> {{contact.email}}</p>
-    <img src="https://thumbs.dreamstime.com/b/businessman-business-suit-portfolio-suit-cartoon-businessman-business-suit-portfolio-suit-cartoon-illustration-isolated-image-124902892.jpg" alt="">
-    <section class="actions">
-        <button class="back-btn" (click)="onBack()">Back</button>
-    </section>
-    <span *ngIf="ans" class="ans">{{ans}}</span>
+<section *ngIf="contact$ | async as contact" class="contact-details">
+  <section>
+    <p><b>Name:</b> {{ contact.name }}</p>
+    <p><b>Phone:</b> {{ contact.phone }}</p>
+    <p><b>Email:</b> {{ contact.email }}</p>
+    <img
+      src="https://thumbs.dreamstime.com/b/businessman-business-suit-portfolio-suit-cartoon-businessman-business-suit-portfolio-suit-cartoon-illustration-isolated-image-124902892.jpg"
+      alt=""
+    />
 
-    <ng-container *ngIf="contact.name as contactName">
-    </ng-container>
-    <transfer [contact]="contact"></transfer>
-    <moves [userId]="contact._id"></moves>
+    <button class="back-btn" (click)="onBack()">Back</button>
+  </section>
+  <!-- <span *ngIf="ans" class="ans">{{ans}}</span> -->
+
+  <!-- <ng-container *ngIf="contact.name as contactName"> </ng-container> -->
+  <section class="details-moves">
+  <transfer [contact]="contact"></transfer>
+  <moves [userId]="user._id"></moves>
+</section>
 </section>

@@ -41,7 +41,7 @@ export class ContactEditComponent implements OnInit {
     onSaveContact() {
         this.contactService.saveContact(this.contact)
             .subscribe({
-                next: () => this.router.navigateByUrl('/'),
+                next: () => this.router.navigateByUrl('/contact'),
                 error: err => console.log('err:', err)
             })
     }
