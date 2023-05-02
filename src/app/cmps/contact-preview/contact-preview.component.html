@@ -1,0 +1,12 @@
+<section class="contact-preview">
+  <img src="https://thumbs.dreamstime.com/b/businessman-business-suit-portfolio-suit-cartoon-businessman-business-suit-portfolio-suit-cartoon-illustration-isolated-image-124902892.jpg" alt="" />
+  <a routerLink="/contact/{{ contact._id }}" class="data">
+    <!-- <img src="https://cdn-icons-png.flaticon.com/512/6928/6928921.png" alt="" /> -->
+    <p>{{ contact.name }}</p>
+  </a>
+  <!-- <p>{{ contact.phone }}</p> -->
+  <section class="actions">
+    <a [routerLink]="['/edit', contact._id]">📝</a>
+    <button (click)="onRemoveContact()" class="remove-btn">❌</button>
+  </section>
+</section>

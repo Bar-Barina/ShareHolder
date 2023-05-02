@@ -1,0 +1,46 @@
+@import "/src/styles.scss";
+div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin: 20px 0;
+  @include for-mobile-layout {
+    align-items: center;
+  }
+  h2 {
+    @include for-mobile-layout {
+      font-size: 17px;
+      display: none;
+    }
+  }
+  span {
+    color: rgb(180, 3, 3);
+  }
+  input {
+    width: 200px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    &:focus {
+      outline: none;
+      border: 1px solid #0c4616;
+    }
+    @include for-mobile-layout {
+      width: 160px;
+    }
+  }
+  a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #fcc125;
+    color: #0c4616;
+    &:hover {
+      background-color: #efb822
+    }
+    @include for-mobile-layout {
+      // font-size: 10px;
+    }
+  }
+}

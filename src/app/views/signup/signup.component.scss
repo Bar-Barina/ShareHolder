@@ -1,0 +1,40 @@
+@import "/src/styles.scss";
+
+.signup {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+  padding: 30px;
+  border-radius: 4px;
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+  img {
+    width: 40%;
+    @include for-mobile-layout {
+      width: 150px;
+    }
+  }
+  input {
+    margin: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(218, 218, 218);
+    &:focus {
+      border: none;
+    }
+  }
+  button {
+    display: flex;
+    padding: 4px 8px;
+    background-color: rgb(252, 213, 53);
+    color: rgb(10, 10, 12);
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+}

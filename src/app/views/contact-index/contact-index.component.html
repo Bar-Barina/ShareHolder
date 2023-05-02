@@ -1,0 +1,9 @@
+<section class="contact-index">
+  <contact-filter></contact-filter>
+  <contact-list
+    (remove)="onRemoveContact($event)"
+    [contacts]="contacts$ | async"
+  ></contact-list>
+</section>
+
+<router-outlet></router-outlet>

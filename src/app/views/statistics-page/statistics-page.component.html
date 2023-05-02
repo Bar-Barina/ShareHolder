@@ -1,0 +1,19 @@
+<main class="statistics-page main">
+    <div class="btns-container">
+        <button (click)="display = marketPriceStr" class="btn btn-purple">
+            Market price
+        </button>
+        <button (click)="display = avgBlockSizeStr" class="btn btn-purple">
+            Avergae block size
+        </button>
+        <button (click)="display = tradeVolumeStr" class="btn btn-purple">
+            Trade volume
+        </button>
+    </div>
+
+    <ng-container [ngSwitch]="display">
+        <chart *ngSwitchCase="avgBlockSizeStr" [chartData]="avgBlockSize$ | async"></chart>
+        <chart *ngSwitchCase="marketPriceStr" [chartData]="marketPrice$ | async"></chart>
+        <chart *ngSwitchCase="tradeVolumeStr" [chartData]="tradeVolume$ | async"></chart>
+    </ng-container>
+</main>

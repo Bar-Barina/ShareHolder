@@ -1,0 +1,11 @@
+<header>
+  <img routerLink="/home" (click)="closeNav()" src="https://logo-logos.com/2017/06/McDonalds_green_logo_Portugal.png" alt="" />
+  <h1 routerLink="/" (click)="closeNav()" >ShareHolder</h1>
+  <span class="burger" (click)="toggleNav()">🍔</span>
+  <nav *ngIf="navVisible">
+    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeNav()">Home</a>
+    <a routerLink="/" routerLinkActive="active" (click)="closeNav()">Contacts</a>
+    <a routerLink="/statistics" routerLinkActive="active" (click)="closeNav()">Statistics</a>
+    <a routerLink="/userDetails" routerLinkActive="active" (click)="closeNav()">User</a>
+  </nav>
+</header>

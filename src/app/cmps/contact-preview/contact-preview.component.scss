@@ -1,0 +1,30 @@
+.contact-preview {
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  border-radius: 3px;
+  padding: 10px 10px;
+&:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+  img {
+    width: 80px;
+  }
+  a {
+    text-decoration: none;
+  }
+  button {
+    background-color: inherit;
+    border: none;
+  }
+  p {
+    padding: 4px;
+    border-radius: 3px;
+    font-size: 17px;
+    &:hover {
+      background-color: #fcc32571;
+    }
+  }
+}

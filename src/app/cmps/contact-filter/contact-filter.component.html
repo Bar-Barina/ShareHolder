@@ -1,0 +1,7 @@
+<div>
+<h2>Some <span>WELL DONE</span> deals are waiting for you.</h2>
+<form action="">
+    <input [(ngModel)]="contactFilter.term" (ngModelChange)="onSetFilter($event)" name="term" placeholder="Search" />
+</form>
+<a routerLink="/edit">Add Contact</a>
+</div>

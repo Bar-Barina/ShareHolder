@@ -1,0 +1,8 @@
+<form (ngSubmit)="onSignup($event)" class="signup">
+    <img
+      src="https://thumbs.dreamstime.com/b/businessman-business-suit-portfolio-suit-cartoon-businessman-business-suit-portfolio-suit-cartoon-illustration-isolated-image-124902892.jpg"
+    />
+    <label for="name">Please enter your name</label>
+    <input (change)="onHandleChange($event)" type="text" name="name" id="name" />
+    <button>Sign up</button>
+  </form>

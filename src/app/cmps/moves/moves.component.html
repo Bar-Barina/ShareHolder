@@ -1,0 +1,19 @@
+<ng-container *ngIf="moves && moves.length; else noMoves">
+  <h2>{{ title }}</h2>
+  <section class="move-list flex">
+    <div *ngFor="let move of moves; let idx = index">
+      <p>
+        <span>At:</span> {{ move.at | date: 'medium' }}
+      </p>
+      <p>
+        <span>Amount:</span> {{ move.amount }}$
+      </p>
+      <p>
+        <span>Transferd to:</span> {{ move.to }}
+      </p>
+    </div>
+  </section>
+</ng-container>
+<ng-template #noMoves>
+  <div class="move-list">No Moves Yet...</div>
+</ng-template>
